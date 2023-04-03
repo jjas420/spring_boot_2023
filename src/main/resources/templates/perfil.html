@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div><h1 th:text="${titulo}"></h1>
+        </div>
+        <div> <p1>usuario:  </p1><p1 th:text="${usuario.Usuario}" >
+               
+               
+                
+            
+                        
+            </p1>
+            <br>
+              
+            <p1 th:if="${usuario.Email}" th:text="${usuario.Email}"> </p1>
+             <p1 th:if="${usuario.Email==null}" th:text="'no tiene correo'"> </p1>
+        </div>
+      
+    </body>
+</html>

@@ -10,6 +10,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div><<h1>hola</h1></div>
+        <div><h1 th:text="${titulo}"></h1></div>
+        <div th:if="${ListaUsuarios.size()==0}">
+            no hay usuarios en la lista
+            
+        </div>
     </body>
 </html>
