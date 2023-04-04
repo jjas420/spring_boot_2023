@@ -61,6 +61,7 @@ public class IndexController {
          usuario.setNombre_completo("Jonathan Ayona");
          
          usuario.setUsuario("jjas420");
+         usuario.setEmail("jonathanAyona@gamail.com");
                 m.addAttribute("usuario",usuario );
                 m.addAttribute("titulo", "perfil del usuario:".concat(usuario.getNombre_completo()));
 
@@ -71,6 +72,12 @@ public class IndexController {
      @RequestMapping("/lista")
      public String lista(Model m){
          List <Usuario> usuarios= new ArrayList<>();
+         usuarios.add(new Usuario("jonathan ayona","jjas320","djasdj"));
+         usuarios.add(new Usuario("carla mendez","sad","carla@"));
+          usuarios.add(new Usuario("julio ", "sad2","cas@"));
+
+
+         
           m.addAttribute("titulo","lista De usuarios" );
          m.addAttribute("ListaUsuarios",usuarios);
 

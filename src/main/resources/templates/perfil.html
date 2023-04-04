@@ -21,7 +21,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             </p1>
             <br>
               
-            <p1 th:if="${usuario.Email}" th:text="${usuario.Email}"> </p1>
+            <p1 th:if="${usuario.Email != null}" th:text="${usuario.Email}"> </p1>
              <p1 th:if="${usuario.Email==null}" th:text="'no tiene correo'"> </p1>
         </div>
       

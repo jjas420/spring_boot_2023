@@ -5,15 +5,49 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>TODO supply a title</title>
+        <title>lista </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div><h1 th:text="${titulo}"></h1></div>
-        <div th:if="${ListaUsuarios.size()==0}">
+        <div th:if="${ListaUsuarios.isEmpty()}">
             no hay usuarios en la lista
             
+        </div>
+        <div>
+            <table th:if="${!ListaUsuarios.isEmpty()}">
+                <thead>
+                    <tr>
+                        <th> nombre</th>
+                        <th> usuario</th>
+                        <th> correo</th>
+                        
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <tr th:each="usuarios:${ListaUsuarios}">
+                        <td th:text="${usuarios.nombre_completo}">   
+                            
+                        </td>
+                        <td th:text="${usuarios.Usuario}">
+                            
+                            
+                        </td>
+                        <td th:text="${usuarios.Email}" >
+                        
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                    
+                    
+                    
+                    
+                </tbody>
+            </table>
         </div>
     </body>
 </html>
