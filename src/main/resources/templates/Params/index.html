@@ -3,27 +3,20 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-
 <html xmlns:th="http://www.thymeleaf.org">
-    
     <head>
-        <title>Curos 2023</title>
+        <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        
-        
-        <div> <h1 th:text="${titulo}"> </h1></div>
-        
-        <a href="perfil"> ir a perfil</a> <br>
-        <a href="lista"> ir a lista de usuarios</a> <br>
-       <a href="/params/" > paramss </a>
-       
-
-              
-        
-        
+        <div>TODO write content</div>
+        <a th:href="@{/params/String(texto='hola jonathan ayona')}">
+            params/String(texto='hola jonathan ayona')}
+        </a>
+        <a th:href="@{/params/String(texto='hola  tania')}">
+            <br>
+            params/String(texto='hola jonathan tania')}
+        </a>
     </body>
-    
 </html>
