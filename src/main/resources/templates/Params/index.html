@@ -10,13 +10,28 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div><h1> lista de params</h1></div>
         <a th:href="@{/params/String(texto='hola jonathan ayona')}">
             params/String(texto='hola jonathan ayona')}
         </a>
         <a th:href="@{/params/String(texto='hola  tania')}">
             <br>
-            params/String(texto='hola jonathan tania')}
+            params/String(texto='hola  tania')}
         </a>
+         <a th:href="@{/params/String}">
+            <br>
+            params/String(texto='sin parametros')}
+        </a>
+        <a th:href="@{/params/mix-Params(texto='hola  jonathan', numero=23)}">
+            <br>
+            params/mix-Params(texto='joa')}
+        </a>
+        <a th:href="@{/params/mix-Paramss(texto='hola  jonathan', numero=23)}">
+            <br>
+            params/mix-Params(texto='joa')}
+        </a>
+        
+        
+        
     </body>
 </html>

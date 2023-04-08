@@ -6,8 +6,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
 <html xmlns:th="http://www.thymeleaf.org">
     
+    
     <head>
-        <title>Curos 2023</title>
+                <link rel="stylesheet" type="text/css" th:href="@{/css/css.css}">
+
+        <title>CurSos 2023</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -15,11 +18,30 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         
         
         <div> <h1 th:text="${titulo}"> </h1></div>
+        <ul>
+            
+            <li>        <a href="perfil"> ir a perfil</a> 
+</li>
+            <li>        <a href="lista"> ir a lista de usuarios</a> <br>
+</li>
+            <li>       <a href="/params/" > paramss </a>
+</li>
+<li>              <a href="/variables/" >  Variables </a>
+    </li>
+
+        </ul>
+        <div id="imagenes"> 
+              <img th:src="@{/css/img/descarga.png}" />
         
-        <a href="perfil"> ir a perfil</a> <br>
-        <a href="lista"> ir a lista de usuarios</a> <br>
-       <a href="/params/" > paramss </a>
-       
+        
+        </div>
+
+  
+          
+            
+            
+            
+    
 
               
         

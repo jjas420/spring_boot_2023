@@ -8,6 +8,7 @@ import com.curso20203SpringBoot.demo.Models.Usuario;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -23,10 +24,10 @@ import org.springframework.web.servlet.ModelAndView;
  * @author ayosu
  */
  @Controller
- @RequestMapping({"/inicio","/"})
+ @RequestMapping({"/inicio"})
 public class IndexController {
      
-     @RequestMapping(value={"/index","/home","/"},method=RequestMethod.GET)
+     @RequestMapping(value={"/index","/home"},method=RequestMethod.GET)
      /* ejemplo con model
      public String index(Model m){
          m.addAttribute("titulo", "hola Spring Jonathan");
@@ -47,22 +48,30 @@ public class IndexController {
      //ModelAndView ejemplo 
      public ModelAndView index(ModelAndView mv){
          
-         mv.addObject("titulo", "hola Spring Jonathan");
+         mv.addObject("titulo", " Spring Jonathan");
          
          mv.setViewName("index");
          return mv;
      }
      
      
+     
+     
       //@RequestMapping(value={"/sa"},method=RequestMethod.GET)
+     @Value("${texto.index.email}")
+     String texto_gmail;
+     @Value("${texto.index.nombre_completo}")
+     String nombre_completo;
+     @Value("${texto.index.Usuario}")
+     private String  texto_usuario;
      
      @RequestMapping("/perfil")
      public String Perfil(Model m){
          Usuario usuario= new Usuario();
-         usuario.setNombre_completo("Jonathan Ayona");
+         usuario.setNombre_completo(nombre_completo);
          
-         usuario.setUsuario("jjas420");
-         usuario.setEmail("jonathanAyona@gamail.com");
+         usuario.setUsuario(texto_usuario);
+         usuario.setEmail(texto_gmail);
                 m.addAttribute("usuario",usuario );
                 m.addAttribute("titulo", "perfil del usuario:".concat(usuario.getNombre_completo()));
 
@@ -102,6 +111,7 @@ public class IndexController {
 
              }
      
+             
      
      
      
